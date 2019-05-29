@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/HoneyHome/index.html</loc>
+    
+    <lastmod>2019-05-29T20:26:06.454Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2019/05/30/your-title/</loc>
     
     <lastmod>2019-05-29T20:12:12.552Z</lastmod>
