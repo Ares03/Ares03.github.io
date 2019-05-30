@@ -1823,7 +1823,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #0d060a;
+  background: #8bffdb;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3013,7 +3013,7 @@ pre .javascript .function {
   -moz-box-shadow: 0 0 5px rgba(202,203,204,0.5);
 }
 #heart {
-  animation: heartAnimate 1.55s ease-in-out infinite;
+  animation: heartAnimate 1.33s ease-in-out infinite;
 }
 .with-love {
   color: #ff71a8;
