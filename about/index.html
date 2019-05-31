@@ -22,6 +22,10 @@
 <meta name="theme-color" content="#222">
 
 
+  
+  
+  <link rel="stylesheet" href="/lib/needsharebutton/needsharebutton.css">
+
 
 
   
@@ -493,10 +497,10 @@ daovoice('update');
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
             <a href="/">
-              <img class="site-author-image" itemprop="image" src="/images/Boy.jpg" alt="Ares03">
+              <img class="site-author-image" itemprop="image" src="/images/Boy.jpg" alt="Ares03&Lizzie">
             </a>    
             
-              <p class="site-author-name" itemprop="name">Ares03</p>
+              <p class="site-author-name" itemprop="name">Ares03&Lizzie</p>
               <div class="site-description motion-element" itemprop="description">有生之年能遇见你，竟花光所有力气</div>
           </div>
 
@@ -687,11 +691,11 @@ daovoice('update');
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019-06-01</span>
   <span class="with-love" id="animate">
     <i class="fa fa-heart"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">Ares03</span>
+  <span class="author" itemprop="copyrightHolder">Ares03&Lizzie</span>
 
   
 
@@ -747,6 +751,12 @@ daovoice('update');
 
     
 
+    
+      <div id="needsharebutton-float">
+        <span class="btn">
+          <i class="fa fa-share-alt" aria-hidden="true"></i>
+        </span>
+      </div>
     
 
     
@@ -1289,6 +1299,38 @@ daovoice('update');
   
 
   
+  
+  
+  <script src="/lib/needsharebutton/needsharebutton.js"></script>
+  <script>
+    
+      pbOptions = {};
+      
+        pbOptions.iconStyle = "default";
+      
+        pbOptions.boxForm = "horizontal";
+      
+        pbOptions.position = "bottomCenter";
+      
+        pbOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook,Evernote";
+      
+      new needShareButton('#needsharebutton-postbottom', pbOptions);
+    
+    
+      flOptions = {};
+      
+        flOptions.iconStyle = "default";
+      
+        flOptions.boxForm = "horizontal";
+      
+        flOptions.position = "topRight";
+      
+        flOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook,Evernote";
+      
+      new needShareButton('#needsharebutton-float', flOptions);
+    
+  </script>
+
 
   
 
