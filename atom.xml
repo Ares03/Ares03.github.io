@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-05-30T13:41:19.363Z</updated>
+  <updated>2019-06-01T12:03:13.634Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hexo+GithubPages搭建网站</title>
+    <link href="http://yoursite.com/2019/06/01/Hexo-GithubPages%E6%90%AD%E5%BB%BA%E7%BD%91%E7%AB%99/"/>
+    <id>http://yoursite.com/2019/06/01/Hexo-GithubPages搭建网站/</id>
+    <published>2019-06-01T03:47:13.000Z</published>
+    <updated>2019-06-01T12:03:13.634Z</updated>
+    
+    <content type="html"><![CDATA[<p>&emsp;&emsp;折腾了几天终于是把自己的个人博客给搭建好了，我利用的是Hexo+GithubPages的形式.过程中参考了许多大佬的文章，也在配置优化博客的时候收藏了很多很不错的博客。（PS：遇到好看的博客记得收藏，能有不少灵感和思路，还可以get新功能。）</p><h1 id="博客搭建"><a href="#博客搭建" class="headerlink" title="博客搭建"></a>博客搭建</h1><h2 id="博客的搭建过程主要是下面几步："><a href="#博客的搭建过程主要是下面几步：" class="headerlink" title="博客的搭建过程主要是下面几步："></a>博客的搭建过程主要是下面几步：<br></h2><ol><li>安装Node.js</li><li>安装Git</li><li>安装Hexo博客框架</li><li>部署到Github上</li><li>绑定域名</li></ol><h3 id="安装Node-js和Git"><a href="#安装Node-js和Git" class="headerlink" title="安装Node.js和Git"></a>安装Node.js和Git</h3><p>Node.js下载地址：<a href="https://nodejs.org/en/download/" target="_blank" rel="noopener">https://nodejs.org/en/download/</a><br>Git软件下载地址：<a href="https://git-scm.com/download" target="_blank" rel="noopener">https://git-scm.com/download</a></p><h3 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h3><p>Hexo就是我们的博客框架，因为用的是Markdown解析文章，可以利用靓丽的主题快速高效地生成静态网页。  </p><p>首先在本地磁盘中建立一个Hexo文件夹(自己喜欢的名字就行)用于存储本地文件（使用于本地文件保存以及测试）</p><p>然后在新建的Hexo文件夹的根目录下右键打开git bash命令框（每次对博客或者主题进行修改都必须在该文件夹下打开git bash进行操作，别的地方打开操作命令无效）</p><p>在命令框中输入命令代码安装Hexo：</p><p><code>npm install -g hexo-cli  #-g表示全局安装</code></p><p>安装完成后输入以下命令对Hexo进行初始化：</p><p><code>hexo init   #初始化</code></p><p>然后进行本地运行测试：</p><pre><code>hexo clean  # 清理缓存hexo g      # 等同于hexo generate，生成静态文件hexo s      # 等同于hexo server，在本地服务器运行</code></pre><p>再就是打开浏览器地址栏输入：<a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a> 便可以预览生成的博客框架了。（这里要注意输入<strong>hexo s</strong>命令后，git命令框是会进入锁定模式，要执行<strong>CTRL+C</strong>的命令后才会解除锁定并可以继续输入命令进行操作）</p><p>还有就是在命令框里对Hexo进行操作的时候<strong>CTRL+C</strong>是退出当前的预览模式，并不是复制。这里的复制粘帖要通过鼠标右键进行。</p><h3 id="如何部署到Github上"><a href="#如何部署到Github上" class="headerlink" title="如何部署到Github上"></a>如何部署到Github上</h3><ol><li>注册个人Github账号</li><li>在Github首页点击Start Project</li><li>创建Repository</li></ol><p>在填写Repository name仓库名的时候，名字的格式必须是 username.github.io，username必须与你的Github用户名一样。</p><h4 id="绑定到Github上"><a href="#绑定到Github上" class="headerlink" title="绑定到Github上"></a>绑定到Github上</h4><h5 id="修改站点配置文件-config-yml"><a href="#修改站点配置文件-config-yml" class="headerlink" title="修改站点配置文件_config.yml"></a>修改站点配置文件_config.yml</h5><blockquote><p>要注意站点配置文件和主题配置文件名称都是一样的_config.yml，站点配置文件在网站根目录，主题配置文件在根目录下的theme文件的具体theme下的_config.yml。</p></blockquote><p>在建立的博客文件夹的根目录下有个站点配置文件_config.yml,打开_config.yml找到deploy这一栏进行配置修改：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># Deployment</span><br><span class="line">## Docs: https://hexo.io/docs/deployment.html</span><br><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo:</span><br><span class="line">    github: https://github.com/username/username.github.io.git,master</span><br></pre></td></tr></table></figure><p>每个代码语句的冒号后面都是有一个空格的，无论是修改站点配置文件还是主题配置文件的时候都要注意这个，否则语句会无效。</p><h5 id="进行部署"><a href="#进行部署" class="headerlink" title="进行部署"></a>进行部署</h5><p>在控制台使用下面的命令行安装git插件：</p><p><code>npm install hexo-deployer-git --save</code></p><p>安装好之后在输入：</p><p><code>hexo g -d</code></p><p>操作完之后就可以访问Github提供的域名访问你自己的网站了：</p><blockquote><p>username.github.io   (用户名修改成你自己的Github用户名)</p></blockquote><h3 id="绑定自己的域名"><a href="#绑定自己的域名" class="headerlink" title="绑定自己的域名"></a>绑定自己的域名</h3><p>现在国内做的比较好的还是阿里云和腾讯云，可以挑一个平台在上面购买属于自己的域名，我自己在阿里云上购买的.xyz 的域名。</p><p>准备就绪之后进入阿里云的控制台，里面有云解析DNS的服务，在里面对域名进行解析设置。</p><p>然后在你的博客的文件夹的根目录下找到Source文件夹，用记事本在里面添加一个名为CNMAE的文件，文件内容为你自己申请的域名,例如我的是</p><blockquote><p>username.xyz</p></blockquote><p>这里注意文件保存类型为<strong>所有文件</strong>，别保存为txt类型了,会识别不了。如果保存为<strong>所有文件</strong>类型还是自动转为txt格式的话，就手动操作重命名把文件名后缀删除了。</p><p>再到Github你为搭建网站建的Repository里，点进Setting，拉到最后的Github Pages，在Custom domain那一栏填上你自己购买的域名，save保存就可以了。</p><p>完成上面的一系列操作之后一个属于自己的个人网站博客就搭建成功了，在网址输入自己的域名就可以直接访问自己搭建的网站了。</p><h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>网上教程一大堆，大同小异，做的时候也遇到各种各样的坑，借鉴了不同大神的经验才做好自己的网站。后续还添加了许多好玩的功能，当是一件娱乐放松的事也很不错的。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&amp;emsp;&amp;emsp;折腾了几天终于是把自己的个人博客给搭建好了，我利用的是Hexo+GithubPages的形式.过程中参考了许多大佬的文章，也在配置优化博客的时候收藏了很多很不错的博客。（PS：遇到好看的博客记得收藏，能有不少灵感和思路，还可以get新功能。）&lt;/p&gt;
+      
+    
+    </summary>
+    
+      <category term="Web" scheme="http://yoursite.com/categories/Web/"/>
+    
+    
+      <category term="Web" scheme="http://yoursite.com/tags/Web/"/>
+    
+      <category term="Hexo" scheme="http://yoursite.com/tags/Hexo/"/>
+    
+      <category term="Funny" scheme="http://yoursite.com/tags/Funny/"/>
+    
+  </entry>
   
   <entry>
     <title>Honey</title>
