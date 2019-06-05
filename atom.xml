@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-06-01T12:03:13.634Z</updated>
+  <updated>2019-06-05T19:08:03.890Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Java方法调用和重载</title>
+    <link href="http://yoursite.com/2019/06/05/Java%E6%96%B9%E6%B3%95%E8%B0%83%E7%94%A8%E5%92%8C%E9%87%8D%E8%BD%BD/"/>
+    <id>http://yoursite.com/2019/06/05/Java方法调用和重载/</id>
+    <published>2019-06-05T01:38:21.000Z</published>
+    <updated>2019-06-05T19:08:03.890Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="方法的调用方式"><a href="#方法的调用方式" class="headerlink" title="方法的调用方式"></a>方法的调用方式</h2><ol><li>单独调用；</li><li>打印调用；</li><li>赋值调用；</li></ol><h2 id="判断两个数是否相同（扩展：判断一个数是否odd）"><a href="#判断两个数是否相同（扩展：判断一个数是否odd）" class="headerlink" title="判断两个数是否相同（扩展：判断一个数是否odd）"></a>判断两个数是否相同（扩展：判断一个数是否odd）</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">public class DemoSame &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        System.out.println(isSame(20,20));</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public static boolean isSame(int a,int b) &#123;</span><br><span class="line">       return a==b;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="求1-100之间整数的和"><a href="#求1-100之间整数的和" class="headerlink" title="求1~100之间整数的和"></a>求1~100之间整数的和</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">public class DemoSum &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        System.out.println(&quot;结果是：&quot;+getSum());</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public static int getSum() &#123;</span><br><span class="line">        int sum = 0;</span><br><span class="line">        for (int i = 1; i &lt;= 100; i++) &#123;</span><br><span class="line">            sum+=i;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">        return sum;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="按要求打印指定次数的HelloWorld文件"><a href="#按要求打印指定次数的HelloWorld文件" class="headerlink" title="按要求打印指定次数的HelloWorld文件"></a>按要求打印指定次数的HelloWorld文件</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">public class DemoPrint &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        printCount(15);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public static void printCount(int num)  &#123;</span><br><span class="line"></span><br><span class="line">        for(int i=0;i&lt;num;i++)&#123;</span><br><span class="line">            System.out.println(&quot;HelloWorld!&quot;+(i+1));</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>笔记：</p><ol><li>定义方法的时候注意分析参数、返回值的类型。</li><li>方法构建的三要素：返回值、方法名称规范、参数列表。</li><li>对于void，没有返回值的方法，只能单独调用。</li><li>对于方法重载（overload）的掌握，方法名一样参数列表不一样<br>（即一个方法实现多个类似功能）。</li></ol>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;方法的调用方式&quot;&gt;&lt;a href=&quot;#方法的调用方式&quot; class=&quot;headerlink&quot; title=&quot;方法的调用方式&quot;&gt;&lt;/a&gt;方法的调用方式&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;单独调用；&lt;/li&gt;
+&lt;li&gt;打印调用；&lt;/li&gt;
+&lt;li&gt;赋值调用；&lt;/li&gt;
+&lt;/o
+      
+    
+    </summary>
+    
+      <category term="Java学习" scheme="http://yoursite.com/categories/Java%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="Java" scheme="http://yoursite.com/tags/Java/"/>
+    
+  </entry>
   
   <entry>
     <title>Hexo+GithubPages搭建网站</title>
