@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[关于Java中的String]]></title>
+    <url>%2F2019%2F06%2F20%2F%E5%85%B3%E4%BA%8EJava%E4%B8%AD%E7%9A%84String%2F</url>
+    <content type="text"><![CDATA[字符串的联结1、使用join方法(适合少量字符串，低效) String names=String.join(&quot;,&quot;,&quot;Peter&quot;,&quot;Paul&quot;) 2、使用StringBuilder方法（适合大量字符串，高效） 具体参考API范例 字符串的拆分1、通过substring方法12String a=&quot;Hello,World!&quot;;String b=a.substring(7,12); 2、利用split来指定分隔符进行字符串分割12String names=&quot;Peter,Paul,Mary&quot;;String[] res=names.split(&quot;,&quot;); PS:拆分后需要重新遍历数组才能得到输出结果，另外空格的输入方式是“\\s”。 字符串的比较1、location.equals(&quot;world&quot;);最好不要使用“==”方式，容易引起冲突； 2、location.equalsIgnoreCase(&quot;world&quot;);利用该语句可以进行忽略大小写的比较； 数字和字符串的转换1、把数字转换为字符串形式123int n=42;String str=Integer.toString(n);//把数字转换为字符串（&quot;42&quot;）;str=Integer.toString(n,2); //把数字转换为二进制形式的字符串(&quot;101010&quot;); 2、把字符串转换为数字形式123String str=&quot;42&quot;;int n=Integer.ParseInt(str);//输出结果是（101010）；n=Integer.ParseInt(str,2);//输出结果是（42）； 字符串的拼接注意区分一下两个语句的输出结果：12System.out.println(&quot;输出结果是：&quot;+11+2);//(输出结果是：112)；System.out.println(&quot;输出结果是：&quot;+(11+2);//（输出结果是：13）； 总结本文主要是对String字符串一些基本使用方式的归类，还有更多灵活的运用得结合实际例子运用到项目中。]]></content>
+      <categories>
+        <category>Java学习</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Java方法调用和重载]]></title>
     <url>%2F2019%2F06%2F05%2FJava%E6%96%B9%E6%B3%95%E8%B0%83%E7%94%A8%E5%92%8C%E9%87%8D%E8%BD%BD%2F</url>
     <content type="text"><![CDATA[方法的调用方式 单独调用； 打印调用； 赋值调用； 判断两个数是否相同（扩展：判断一个数是否odd）123456789public class DemoSame &#123; public static void main(String[] args) &#123; System.out.println(isSame(20,20)); &#125; public static boolean isSame(int a,int b) &#123; return a==b; &#125;&#125; 求1~100之间整数的和1234567891011121314public class DemoSum &#123; public static void main(String[] args) &#123; System.out.println(&quot;结果是：&quot;+getSum()); &#125; public static int getSum() &#123; int sum = 0; for (int i = 1; i &lt;= 100; i++) &#123; sum+=i; &#125; return sum; &#125;&#125; 按要求打印指定次数的HelloWorld文件12345678910111213public class DemoPrint &#123; public static void main(String[] args) &#123; printCount(15); &#125; public static void printCount(int num) &#123; for(int i=0;i&lt;num;i++)&#123; System.out.println(&quot;HelloWorld!&quot;+(i+1)); &#125; &#125;&#125; 笔记： 定义方法的时候注意分析参数、返回值的类型。 方法构建的三要素：返回值、方法名称规范、参数列表。 对于void，没有返回值的方法，只能单独调用。 对于方法重载（overload）的掌握，方法名一样参数列表不一样（即一个方法实现多个类似功能）。]]></content>
