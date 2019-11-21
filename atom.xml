@@ -37,9 +37,9 @@
       <category term="Web" scheme="http://yoursite.com/categories/Web/"/>
     
     
-      <category term="Java" scheme="http://yoursite.com/tags/Java/"/>
-    
       <category term="Web" scheme="http://yoursite.com/tags/Web/"/>
+    
+      <category term="Java" scheme="http://yoursite.com/tags/Java/"/>
     
       <category term="JDBC" scheme="http://yoursite.com/tags/JDBC/"/>
     
