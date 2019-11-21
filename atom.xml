@@ -39,9 +39,9 @@
     
       <category term="Web" scheme="http://yoursite.com/tags/Web/"/>
     
-      <category term="JDBC" scheme="http://yoursite.com/tags/JDBC/"/>
-    
       <category term="Java" scheme="http://yoursite.com/tags/Java/"/>
+    
+      <category term="JDBC" scheme="http://yoursite.com/tags/JDBC/"/>
     
       <category term="IDEA工具" scheme="http://yoursite.com/tags/IDEA%E5%B7%A5%E5%85%B7/"/>
     
