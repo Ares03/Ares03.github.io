@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[测试版]]></title>
+    <url>%2F2019%2F11%2F21%2F%E6%B5%8B%E8%AF%95%E7%89%88%2F</url>
+    <content type="text"><![CDATA[说的擦拭打算]]></content>
+      <categories>
+        <category>gggg</category>
+      </categories>
+      <tags>
+        <tag>hhhhhh</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[JDBC异常排除]]></title>
     <url>%2F2019%2F11%2F21%2FJDBC%E5%BC%82%E5%B8%B8%E6%8E%92%E9%99%A4%2F</url>
     <content type="text"><![CDATA[IDEA中链接JDBC出现的异常排查测试代码12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152package com.huang.Jtest;import java.sql.Connection;import java.sql.DriverManager;import java.sql.ResultSet;import java.sql.Statement;import java.util.Scanner;public class Test01 &#123; public static void main(String[] args) &#123; Scanner sc = new Scanner(System.in); System.out.println(&quot;请输入地址&quot;); String addrs = sc.nextLine(); System.out.println(&quot;请输入名字&quot;); String name = sc.nextLine(); boolean flag = new Test01().login(addrs,name); if(flag)&#123; System.out.println(&quot;查询成功&quot;); &#125;else&#123; System.out.println(&quot;查询失败&quot;); &#125; &#125; public boolean login(String addrs ,String name) &#123; if(addrs == null || name == null)&#123; return false; &#125; Statement stmt = null; ResultSet rs = null; try &#123; Class.forName(&quot;com.mysql.jdbc.Driver&quot;); Connection conn = DriverManager.getConnection(&quot;jdbc:mysql://127.0.01:3306/2019?useSSL=false&amp;useUnicode=true&amp;characterEncoding=utf8&amp;serverTimezone=GMT&quot;,&quot;root&quot;,&quot;123456&quot;); String sql = &quot;select * from cars where name=&apos;&quot;+name+&quot;&apos;and addrs=&apos;&quot;+addrs+&quot;&apos;&quot;; stmt = conn.createStatement(); rs = stmt.executeQuery(sql); if(rs.next())&#123; return true; &#125;else&#123; return false; &#125; &#125; catch (Exception e) &#123; e.printStackTrace(); &#125; return false; &#125;&#125; 异常及解决方案1、SSL异常 1Establishing SSL connection without server&apos;s identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn&apos;t set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to &apos;false&apos;. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification. 方案 Put the useSSL=falseat the end of the name database: 1例如：Connection con=DriverManager.getConnection(&quot;jdbc:mysql://localhost:3306/test?useSSL=false&quot;,&quot;root&quot;,&quot;root&quot;); 2、SQL样式异常 1You have an error in your SQL syntax; 方案 检查sql语句是否出错，函数是否开/关]]></content>
@@ -8,8 +19,8 @@
         <category>Web</category>
       </categories>
       <tags>
-        <tag>Web</tag>
         <tag>Java</tag>
+        <tag>Web</tag>
         <tag>JDBC</tag>
         <tag>IDEA工具</tag>
       </tags>
